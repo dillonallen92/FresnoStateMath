@@ -1,0 +1,68 @@
+
+\documentclass[12pt]{amsart}
+\usepackage{geometry} % see geometry.pdf on how to lay out the page. There's lots.
+\usepackage{amsmath}
+\newcommand{\innerProd}[2]{\langle #1,#2 \rangle}
+\geometry{a4paper} % or letter or a5paper or ... etc
+% \geometry{landscape} % rotated page geometry
+
+% See the ``Article customise'' template for come common customisations
+
+\title{Differential Geometry Notes and Problems}
+\author{Dillon Allen}
+
+%%% BEGIN DOCUMENT
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\section{Day 1: Review}
+\subsection{Vectors}
+
+A vector function $\vec{f}$ is defined as 
+
+\[
+	\vec{f}\left(t\right) = \langle f_1\left(t\right), f_2\left(t\right), \dots \rangle
+\]
+
+Vector functions in $\mathbb{R}^3$ have the inner product defined as 
+
+\[
+	\vec{f} \cdot \vec{g} = \sum_{i} f_i g_i
+\]
+
+Where $i$ indicates the component of the vector.
+
+The derivative of the inner product can be seen as an analog for the product rule as seen in calculus II. This is defined as
+
+\[
+	\frac{d}{dt} \langle \vec{f} \left(t\right) , \vec{g} \left( t \right) \rangle = \langle \frac{d}{dt} \vec{f}\left(t\right), \vec{g}\left(t\right) \rangle + \langle \vec{f}\left(t\right), \frac{d}{dt} \vec{g}\left(t\right) \rangle
+\]
+
+\begin{proof}
+
+	Let $\vec{f}\left(t\right)$, $\vec{g}\left(t\right)$ be vector valued functions in $\mathbb{R}^n$. WLOG we will drop the function of t notation for brevity. The inner product in 
+	$\mathbb{R}^n$ is defined as 
+	\begin{equation*}
+		\innerProd{f}{g} = \sum_{i} f_i g_i = f_1g_1 + f_2 g_2 + \ldots
+	\end{equation*}
+	
+	Taking the derivative of both sides, we get
+	\begin{equation*}
+		\begin{aligned}
+			\frac{d}{dt} \innerProd{f}{g} &= \frac{d}{dt} \sum_i f_i g_i \\
+										  &= \frac{d}{dt} \left(f_1 g_1 + f_2 g_2 + \ldots \right) \\
+										  &= f^{'}_1 g_1 + f_1 g^{'}_1 + f^{'}_2 g_2 + f_2 g^{'}_2 + \dots \\
+										  &= \left( f^{'}_1 g_1 + f^{'}_2 g_2 + \ldots \right) + \left(f_1 g^{'}_1 + f_2 g^{'}_2 + \ldots \right) \\
+										  &= \innerProd{\frac{d}{dt}\vec{f}}{g} + \innerProd{f}{\frac{d}{dt}\vec{g}} \\
+		\end{aligned}
+	\end{equation*}
+	
+	
+\end{proof}
+
+
+
+
+\end{document}

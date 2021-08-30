@@ -1,0 +1,185 @@
+\documentclass[11pt]{amsart}
+\usepackage{amssymb, amsmath, mathptmx, graphicx, multicol, footmisc, graphicx, comment, textcomp, bm, color}
+\usepackage{amscd}
+\usepackage{amsfonts}
+\usepackage{soul,xcolor,mathtools}
+
+\usepackage[sc,osf]{mathpazo}
+
+%STICKERS
+%\usepackage{eso-pic}
+%\newcommand\AtPagemyUpperLeft[1]{\AtPageLowerLeft{
+%\put(\LenToUnit{0.9\paperwidth},\LenToUnit{0.9\paperheight}){#1}}}
+%\AddToShipoutPictureFG{
+%  \AtPagemyUpperLeft{{\includegraphics[width=.5in,keepaspectratio]{Expert.jpg}}}
+%}
+
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+\newtheorem{theorem}{Theorem}
+\newtheorem{exercise}{Exercise}
+\newtheorem{lemma}{Lemmma}
+
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+
+
+\setcounter{MaxMatrixCols}{30}
+\setlength{\topmargin}{-.5in}
+\setlength{\textheight}{8.75in}
+\setlength{\oddsidemargin}{-0.2in}
+\setlength{\evensidemargin}{-0.2in}
+\setlength{\textwidth}{6.5in}
+\def\labelenumi{\arabic{enumi}.}
+\def\theenumi{\arabic{enumi}}
+\def\labelenumii{(\alph{enumii})}
+\def\theenumii{\alph{enumii}}
+\def\p@enumii{\theenumi.}
+\def\labelenumiii{\arabic{enumiii}.}
+\def\theenumiii{\arabic{enumiii}}
+\def\p@enumiii{(\theenumi)(\theenumii)}
+\def\labelenumiv{\arabic{enumiv}.}
+\def\theenumiv{\arabic{enumiv}}
+\def\p@enumiv{\p@enumiii.\theenumiii}
+\newcommand{\ve}{\varepsilon}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\ds}[1]{\displaystyle{ #1}}
+\newcommand{\tr}{\textrm{tr}}
+\newcommand{\seq}[1]{(#1_n)_{n=1}^{\infty}}
+\newcommand{\ser}[1]{\sum_{n=1}^{\infty} #1_n}
+\renewcommand{\vec}[1]{\mathbf{#1}}
+
+\newcommand{\normal}{\trianglelefteq}
+\newcommand{\mbf}{\mathbf}
+\newcommand{\mbb}[1]{\mbox{\boldmath$#1$}}
+\newcommand{\con}{\, | \,}
+\newcommand{\ip}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\der}[2]{\ds{\frac{\partial #1}{\partial#2}}}
+\newcommand{\se}[1]{\setlength{\extrarowheight}{#1}}
+\newcommand{\G}[2]{\ds{\Gamma_{#1}^{#2}}}
+\newcommand{\wtilde}{\widetilde}
+\newcommand{\surface}{$\vec{r} : \mathcal{U} \to \mathbb{R}^3$}
+\newcommand{\WTS}{\xRightarrow[]{\text{WTS}}}
+
+\pagestyle{plain}
+\setcounter{secnumdepth}{0}
+\parindent=0pt
+
+\newcommand{\oscar}[1]{\textcolor{red}{\textbf{#1}}}
+\setstcolor{red}
+%\st{Some overstruck text}
+
+\begin{document}
+
+\begin{center}
+\textbf{MATH 111, Assignment N Solutions}%CHANGE THIS EVERY WEEK
+\end{center}
+
+\vspace{.3 in}
+
+\textbf{Name:}\underline{~~NAME(S) HERE~~} \hspace{1in} \textbf{Date:} \underline{~~DATE HERE~~}%CHANGE THIS EVERY WEEK
+
+\textbf{Group Name:}\underline{~~NAME HERE~~}
+
+\vspace{.3in}
+
+\begin{definition}
+This is a command I created: $\WTS$. Use it.
+\end{definition}
+
+\begin{theorem}
+This is a theorem.
+\end{theorem}
+
+\vspace{.3in}
+
+\begin{enumerate}
+\item HERE GOES THE STATEMENT OF PROBLEM 1
+
+\begin{proof}
+HERE GOES THE SOLUTION/PROOF TO PROBLEM 1
+\end{proof}
+
+\vspace{.1in}
+
+\item HERE GOES THE STATEMENT OF PROBLEM 2
+
+\begin{proof}
+HERE GOES THE SOLUTION/PROOF TO PROBLEM 2
+\end{proof}
+
+
+
+
+
+
+\vspace{1in}
+
+
+
+
+
+
+\noindent \textbf{HW reminders.}
+\begin{enumerate}
+\item For Assignments 1 and 2, please submit a pdf file to CANVAS and email me the corresponding tex file by the deadline. Starting in assignment 3, there is no need to submit a tex file to me, just the pdf to CANVAS. 
+
+\item You need to create a group contract by the time HW 2 is due. You do not need to resend this unless changes in your group happen.
+
+\item Please email me weekly your individual weekly report (every week).
+
+\item Please make a copy of this file to write your assignment's solutions. Making changes to it, or to use a different file will create problems.
+\end{enumerate}
+\end{enumerate}
+
+
+
+
+
+
+
+
+\newpage
+
+
+
+
+\begin{itemize}
+\item How to get parentheses, brackets of the right size? Use left and right before them. For example
+\[
+\left(\frac{1}{3}\right)^2 =\frac{1}{9}
+\]
+For curly brackets, it is a little more complicated. You need to use an extra backslash
+\[
+A = \left\{   \frac{1}{3}, \frac{1}{9}    \right\}
+\]
+
+\item The natural numbers, rationals, reals, and complex numbers have special shortcuts: $\N$, $\Q$, $\R$, $\C$.
+
+\item This is OK: $\int_0^1 f(x) \ dx$, but this is better $\ds{\int_0^1 f(x) \ dx}$. You could also do
+\[
+\int_0^1 f(x) \ dx
+\]
+
+\item Similarly,  this is OK: $\lim_{n\to \infty} a_n$, but this is better $\displaystyle{\lim_{n\to \infty} a_n}$. And as an equation, we get
+\[
+\lim_{n\to \infty} a_n
+\]
+
+\item There are more examples of how to do things in the \LaTeX \ workshop file posted on CANVAS.
+\end{itemize}
+
+
+
+
+
+
+
+\end{document}
