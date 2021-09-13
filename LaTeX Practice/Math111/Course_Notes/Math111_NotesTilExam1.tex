@@ -1,0 +1,318 @@
+\documentclass[11pt]{amsart}
+\usepackage{amssymb, amsmath, array, mathptmx, graphicx, multicol, footmisc, graphicx, comment, textcomp, bm, color}
+\usepackage{amscd}
+\usepackage{amsfonts}
+\usepackage{soul,xcolor,mathtools}
+\newcolumntype{C}{>$c<$}
+
+\usepackage[sc,osf]{mathpazo}
+\usepackage{tcolorbox}
+\tcbuselibrary{theorems}
+
+\newtcbtheorem[number within = section]{mytheo}{Theorem}%
+{colback=gray!5,colframe=blue!35!black,fonttitle=\bfseries}{th}
+
+
+	
+%STICKERS
+%\usepackage{eso-pic}
+%\newcommand\AtPagemyUpperLeft[1]{\AtPageLowerLeft{
+%\put(\LenToUnit{0.9\paperwidth},\LenToUnit{0.9\paperheight}){#1}}}
+%\AddToShipoutPictureFG{
+%  \AtPagemyUpperLeft{{\includegraphics[width=.5in,keepaspectratio]{Expert.jpg}}}
+%}
+
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+\newtheorem{theorem}{Theorem}
+\newtheorem{exercise}{Exercise}
+\newtheorem{lemma}{Lemmma}
+
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+
+
+\setcounter{MaxMatrixCols}{30}
+\setlength{\topmargin}{-.5in}
+\setlength{\textheight}{8.75in}
+\setlength{\oddsidemargin}{-0.2in}
+\setlength{\evensidemargin}{-0.2in}
+\setlength{\textwidth}{6.5in}
+\def\labelenumi{\arabic{enumi}.}
+\def\theenumi{\arabic{enumi}}
+\def\labelenumii{(\alph{enumii})}
+\def\theenumii{\alph{enumii}}
+\def\p@enumii{\theenumi.}
+\def\labelenumiii{\arabic{enumiii}.}
+\def\theenumiii{\arabic{enumiii}}
+\def\p@enumiii{(\theenumi)(\theenumii)}
+\def\labelenumiv{\arabic{enumiv}.}
+\def\theenumiv{\arabic{enumiv}}
+\def\p@enumiv{\p@enumiii.\theenumiii}
+\newcommand{\ve}{\varepsilon}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\ds}[1]{\displaystyle{ #1}}
+\newcommand{\tr}{\textrm{tr}}
+\newcommand{\seq}[1]{(#1_n)_{n=1}^{\infty}}
+\newcommand{\ser}[1]{\sum_{n=1}^{\infty} #1_n}
+\renewcommand{\vec}[1]{\mathbf{#1}}
+
+\newcommand{\normal}{\trianglelefteq}
+\newcommand{\mbf}{\mathbf}
+\newcommand{\mbb}[1]{\mbox{\boldmath$#1$}}
+\newcommand{\con}{\, | \,}
+\newcommand{\ip}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\der}[2]{\ds{\frac{\partial #1}{\partial#2}}}
+\newcommand{\se}[1]{\setlength{\extrarowheight}{#1}}
+\newcommand{\G}[2]{\ds{\Gamma_{#1}^{#2}}}
+\newcommand{\wtilde}{\widetilde}
+\newcommand{\surface}{$\vec{r} : \mathcal{U} \to \mathbb{R}^3$}
+\newcommand{\WTS}{\xRightarrow[]{\text{WTS}}}
+
+\pagestyle{plain}
+\setcounter{secnumdepth}{0}
+\parindent=0pt
+
+\newcommand{\oscar}[1]{\textcolor{red}{\textbf{#1}}}
+\setstcolor{red}
+%\st{Some overstruck text}
+
+\begin{document}
+
+\begin{center}
+\textbf{MATH 111, Course Notes Until Exam 1}%CHANGE THIS EVERY WEEK
+\end{center}
+
+\vspace{.3 in}
+
+\textbf{Name:}\underline{Dillon Allen} \hspace{1in} \textbf{Date:} \underline{08/30/2021}%CHANGE THIS EVERY WEEK
+
+\vspace{.3in}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 		  Start of Code           %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{section}{Lecture 1}
+
+In this lecture, we just learned the basics of LaTeX so nothing really happened.
+
+\end{section}
+
+\begin{section}{Lecture 2: Statements and Hypotheses}
+
+\begin{enumerate}
+	\item Statements 
+	\begin{definition} 
+	A statement is a sentence that is either \textbf{true} or \textbf{false}.
+	\end{definition}
+	
+	\begin{example}
+		The sky will is blue today.
+	\end{example}
+	
+	\item Definition of a Proof and Theorem
+	
+	\begin{definition}
+		A \textbf{proof} is an argument that is logically sound. This argument is  \textbf{thorough}, \textbf{logical}, and \textbf{complete}.
+	\end{definition}
+	
+	\begin{definition}
+		A \textbf{theorem} is a true statement that has a proof.
+	\end{definition}
+	
+Theorem structure: If \underline{HYPOTHESIS} then \underline{CONCLUSION}.
+	
+This will later be written as: IF $ \underline{P} \implies \underline{Q}$ 
+	
+\end{enumerate}
+	
+\end{section}
+
+\begin{section}{Lecture 3: Implications and Mathematical Writing}
+This lecture was full of examples for writing mathematical statements into the $ P \implies Q$ format.
+
+\begin{example}
+	If $f$ is differentiable at $x = c$ then $f$ is continuous at $x = c$.
+	
+	\vspace{.1 in}
+	
+	$P = f \ \text{is differentiable at} x = c $ 
+	
+	\vspace{.1 in}
+	
+    $Q = f \ \text{is continuous at} x = c. $
+\end{example}
+
+\begin{example}
+	$x^2 \geq 0, \ \text{for all} x \in \R $
+	
+	\vspace{.1in}
+	
+	$ P = x \in \R $
+	
+	\vspace{.1 in}
+	
+	$Q = x^2 \geq 0 $
+	
+\end{example}
+
+\begin{example}
+	If $x \in A \implies x \in B \ \text{and} \ B \subseteq C \ \text{then} \ x \in A \implies x \in C$.
+	
+\vspace{.1 in}
+
+$ P = x \in A \implies x \in B \ \text{and} \ B \subseteq C $
+
+\vspace{.1 in}
+
+$ Q = x \in A \implies x \in C $
+\end{example}	
+\end{section}
+
+\begin{section}{Lecture 4: AND, OR, Truth Tables}
+	AND and OR Statements: The symbol for AND is $\wedge$ and the symbol for OR is $\vee$.
+	
+	Truth Tables
+	\[
+	\begin{array}{ C|C|C|C }
+	$p$ & $q$ & $p \wedge q$ & $p \vee q$ \\
+	\hline
+	T & T & T & T\\
+	T & F & F & T\\
+	F & T & F & T\\
+	F & F & F & F \\
+	\end{array}
+	\]
+\end{section}
+
+\begin{section}{Lecture 5: IFF and Negation}
+
+
+\begin{definition} If $ P \implies Q$ and $Q \implies P$ are equivalent, then we can rewrite the expression as $ P \iff Q$ \end{definition}. This is known as the "If and Only If" expression.
+
+\begin{definition}
+	Reversing an implication is called the \textbf{converse}.
+\end{definition}
+
+\begin{definition}
+	Given a statement $P$, the statement saying the exact opposite of $P$ is called the \textbf{negation} of $P$, denoted as $\neg P$
+\end{definition}
+
+\end{section}
+
+\begin{section}{Lecture 6: DeMorgans Laws}
+
+\begin{definition}
+	DeMorgan's Laws are 
+	
+	\begin{enumerate}
+		\item $ \neg \left(P \wedge Q \right) = \neg P \vee \neg Q $
+		
+		\item $ \neg \left( P \vee Q \right) = \neg P \wedge \neg Q $
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}
+	$ P \implies Q$ is logically equivalent to $ \neg P \vee Q $
+\end{definition}
+
+
+Examples: Negate the following sentences
+
+\begin{enumerate}
+	\item It will be hot OR sunny tomorrow
+	
+	$ P = $ It will be hot tomorrow
+	
+	$ Q = $ It will be sunny tomorrow
+	
+	$ \neg \left( P \vee Q \right) = \neg P \wedge \neg Q $
+	
+	It will not be hot AND it will not be sunny tomorrow.
+	
+	\item All math professors are awesome
+	
+	This is tricky because it uses a quantifier $\forall $. $\neg \forall \implies \exists$ So the negation of this sentence is "Not all math professors are awesome" or "There exists a math professor that is not awesome".
+\end{enumerate}
+\end{section}
+
+\begin{section}{Lecture 7: Quantifiers}
+
+There are three quantifiers that we need to know
+
+\begin{enumerate}
+	\item \underline{For all}
+	
+	The first quantifier to know is the "for all" symbol, denoted as $\forall$. An example of this symbol is 
+	
+	\[
+		\forall x \in \N, \ x^2 + 1 > 0
+	\]
+	
+	\item \underline{There Exists}
+	
+	The next symbol dictates the existence of some values within a set or collection of objects. This is denoted by the symbol $\exists$. An example of this is 
+	
+	\[
+		\exists x \in \Z, \ \sqrt{x} - 3 < 0
+	\]
+	
+	\item \underline{Unique Existence}
+	
+	The final quantifier is a more specific version of existence. This one states that there is only one value, a unique value, inside a set or collection. This is denoted as $\exists !$. An example of this symbol is 
+	
+	\[
+		\exists! n \in \N, \forall x \in \R, \ x^n = x
+	\]
+\end{enumerate}
+
+\end{section}
+
+\begin{section}{Negation of Quantifiers}
+
+
+	There are two main takeaways from negating quantifiers: 
+	
+	\begin{enumerate}
+		
+		\item \underline{for all}
+		
+		The negation of for all, $\forall$, is $\neg \forall = \exists$.
+		
+		An example would be 
+		
+		\[
+		\neg \forall x \in \N \implies \exists x \in \N
+		\]
+		
+		\item \underline{There exists}
+		
+		The negation of there exists, $\exists$, is $\neg \exists = \forall $.
+		
+		An example of this negation would be 
+		
+		\[
+			\neg ( \exists x \in \R, \ x^2 - 7x > 0)
+		\]
+		
+		\[
+			\implies \forall x \in \R, \ x^2 - 7x \leq 0
+		\]
+		
+	\end{enumerate}
+	
+	A quick aside about inequalities. The negation of a strict inequality is the reverse, and includes said value. In the previous example, we had a strict inequality of being greater than 0, but the negation allowed us to be less than or equal to 0.
+\end{section}
+
+
+
+\end{document}

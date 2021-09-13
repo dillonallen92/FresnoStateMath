@@ -1,0 +1,358 @@
+\documentclass[11pt]{amsart}
+\usepackage{amssymb, amsmath, mathptmx, graphicx, multicol, footmisc, graphicx, comment, textcomp, bm, color}
+\usepackage{amscd}
+\usepackage{amsfonts}
+\usepackage{enumerate}
+
+\usepackage[sc,osf]{mathpazo}
+
+%STICKERS
+%\usepackage{eso-pic}
+%\newcommand\AtPagemyUpperLeft[1]{\AtPageLowerLeft{
+%\put(\LenToUnit{0.9\paperwidth},\LenToUnit{0.9\paperheight}){#1}}}
+%\AddToShipoutPictureFG{
+%  \AtPagemyUpperLeft{{\includegraphics[width=.5in,keepaspectratio]{Expert.jpg}}}
+%}
+
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+
+\setcounter{MaxMatrixCols}{30}
+\setlength{\topmargin}{-.5in}
+\setlength{\textheight}{8.5in}
+\setlength{\oddsidemargin}{0.0in}
+\setlength{\evensidemargin}{0.0in}
+\setlength{\textwidth}{6.5in}
+\def\labelenumi{\arabic{enumi}.}
+\def\theenumi{\arabic{enumi}}
+\def\labelenumii{(\alph{enumii})}
+\def\theenumii{\alph{enumii}}
+\def\p@enumii{\theenumi.}
+\def\labelenumiii{\arabic{enumiii}.}
+\def\theenumiii{\arabic{enumiii}}
+\def\p@enumiii{(\theenumi)(\theenumii)}
+\def\labelenumiv{\arabic{enumiv}.}
+\def\theenumiv{\arabic{enumiv}}
+\def\p@enumiv{\p@enumiii.\theenumiii}
+\newcommand{\ve}{\varepsilon}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\ds}[1]{\displaystyle{ #1}}
+\newcommand{\tr}{\textrm{tr}}
+\newcommand{\seq}[1]{(#1_n)_{n=1}^{\infty}}
+\newcommand{\ser}[1]{\sum_{n=1}^{\infty} #1_n}
+\renewcommand{\vec}[1]{\mathbf{#1}}
+
+\newcommand{\normal}{\trianglelefteq}
+\newcommand{\mbf}{\mathbf}
+\newcommand{\mbb}[1]{\mbox{\boldmath$#1$}}
+\newcommand{\con}{\, | \,}
+\newcommand{\ip}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\der}[2]{\ds{Frac{\partial #1}{\partial#2}}}
+\newcommand{\se}[1]{\setlength{\extrarowheight}{#1}}
+\newcommand{\G}[2]{\ds{\Gamma_{#1}^{#2}}}
+\newcommand{\wtilde}{\widetilde}
+\newcommand{\surface}{$\vec{r} : \mathcal{U} \to \mathbb{R}^3$}
+\pagestyle{plain}
+\setcounter{secnumdepth}{0}
+\parindent=0pt
+
+\newcommand{\oscar}[1]{\textcolor{red}{\textbf{#1}}}
+
+\begin{document}
+\begin{center}
+\textbf{MATH 111, Assignment 3 (due 09/14/21)}%CHANGE DATE EVERY WEEK
+\end{center}
+
+\vspace{.1in}
+
+\begin{center}
+\textbf{MATH 111, Assignment 3 Solutions}%CHANGE THIS EVERY WEEK
+\end{center}
+
+\vspace{.1 in}
+
+\textbf{Name:}\underline{\ Dillon Allen, Julio Hernandez } \hspace{1in} \textbf{Date:} \underline{ 09/11/2021}%CHANGE THIS EVERY WEEK
+
+\textbf{Group Name:}\underline{\ Group 2}
+
+
+\begin{center}
+\begin{tabular}{|p{2.5in}|}
+\hline
+
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{.2in}
+
+\begin{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item (50 points) Negate the following statements. Give the statement \emph{and} its negation in both symbolic form, then also give negation in the form of a sentence. Finally, write the converse of each statement when possible.
+
+\begin{enumerate}[(i)]
+\item The numbers $x$ and $y$ are both odd.
+
+Solution: The statement can be written in $P \wedge Q$ in symbolic form. Thus, the statement reads $(x\text{ is odd}) \wedge (y\text{ is odd})$. The negation of the symbolic form is
+
+\[
+\neg(x\text{ is odd}) \wedge (y\text{ is odd}) = (x\text{ is even}) \vee (y\text{ is even})
+\]
+
+The negation in word form can be described as, The number $x$ is even or the number $y$ is even.
+
+
+\item Let $ABC$ be an equilateral triangle or a right triangle.
+
+Solution: P: ABC is an equilateral triangle
+
+Q: ABC is a right triangle.
+
+This statement is of the form $P \vee Q$, so the negation of this is
+
+\[
+    \neg(P \vee Q) = \neg P \wedge \neg Q
+\]
+
+The negation in sentence form is that ABC is not an equilateral triangle and ABC is not a right triangle.
+
+
+\item $\sqrt{2}$ is a real number that is not rational.
+
+Solution: P: $\sqrt{2} \in \R$
+
+Q: $\sqrt{2} \notin \Q$
+
+Symbolically, this is an and statement that is of the form $P \wedge Q$. The negation of this is $\neg( P \wedge Q) = \neg P \vee \neg Q$. In a sentence, this reads as $\sqrt{2}$ is not a real number or $\sqrt{2}$ is a rational number.
+
+
+\item If $x$ is a real number then $x^2+1>0.$ 
+
+Solution: P: $x \in \R$
+
+Q: $x^2 + 1 > 0$
+
+Symbolically this is a $P \implies Q$ statement. The negation of this is is $\neg(P \implies Q)$ = $P \wedge \neg Q$. In a symbolic form the negation this reads as $(x \in \R) \wedge (x^2 +1 \leq 0) $. In a sentence the negation reads as $x$ is a real number and one added to the square of x is less than or equal to 0. The converse of this statement would be that if $x^2+1 > 0$ then $x$ is a real number.
+
+\item The number $x$ is positive, but the number $y$ is not positive.
+
+Solution:The original statement in symbolic form is $(x > 0) \wedge (y < 0)$. The negation of this statement is 
+\begin{align*}
+\neg ((x > 0) \wedge (y < 0)) &= \neg (x > 0) \vee \neg (y < 0) \\
+                              &= (x \leq 0) \vee (y \geq 0) \\
+\end{align*}
+
+In sentence form, this statement says that the number $x$ is less than or equal to zero or the number $y$ is greater than or equal to zero.
+
+\item If $x$ is a rational number and $x\neq 0$, then $\tan(x)$ is not a rational number.
+
+Solution: The original statement in symbolic form would be $$(x \in \Q) \wedge (x \neq 0) \implies (\tan(x) \notin \Q)$$. The negation of the following statement would be 
+\begin{align*}
+    \neg((P \wedge Q)&\implies R)\\
+    (P \wedge Q) & \wedge \neg R\\
+\end{align*}
+% ~[( p AND q) -> R]
+% (p AND q) AND ~R
+
+
+Symbolically, the negation says 
+
+\[
+    ((x \in \Q) \wedge (x \neq 0)) \wedge ( \tan(x) \in \Q)
+\]
+
+In a sentence, this negation says that $x$ is a rational number and $ x \neq 0 $ and $\tan(x)$ is a rational number. 
+
+For the converse, the statement would be $ R \implies ( P \wedge Q) $. In sentence form, this would say if $\tan(x)$ is not a rational number then $x$ is a rational number and $x \neq 0$.
+
+\item For all real numbers $x$ and $y$, $x\neq y$ implies that $x^2+y^2>0$.
+
+Solution: Symbolically, this statement reads
+\[ \forall x \in \R \ \forall y \in \R, \ (x \neq y) \implies (x^2 + y^2 > 0) \]
+
+This is a $ P \implies Q$ statement, with the negation being $\neg (P \implies Q) = P \wedge \neg Q$. Therefore, the negation of this statement is
+
+\begin{align*}
+    \neg (\forall x \in \R \ \forall y \in \R, \ (x \neq y) \implies (x^2 + y^2 > 0)) &= \exists x \in \R \ \exists y \in \R, \ \neg ( (x \neq y) \implies (x^2 + y^2 > 0)) \\
+    &= \exists x \in \R \ \exists y \in \R, \ (x \neq y) \wedge \neg(x^2 + y^2 > 0) \\
+    &= \exists x \in \R \ \exists y \in \R, \ (x \neq y) \wedge (x^2 + y^2 \leq 0)
+\end{align*}
+
+The negation, in sentence form,  says that there exists some real numbers $x$ and $y$ such that if $x \neq y$ then $x^2 + y^2 \leq 0$.
+
+The converse of this statement says that $x^2 + y^2 > 0$ implies that $x$ and $y$ are real numbers where $x \neq y$.
+
+\item There exists a rational number whose square is 2.
+
+Solution Symbolically this statement read as 
+\[ 
+\exists x \in Q, \ x^2 = 2.
+\]
+This is a $P$ statement with the negation being $\neg P$
+\begin{align*}
+    \neg(\exists x \in Q, x^2 &= 2)\\
+    (\forall x \in Q, x^2 & \neq 2)\\
+\end{align*}
+This negation in as a sentence means says that for all $x \in \Q$ there is no $Q$ that's $x^2 \neq 2$
+
+
+\item If the set $B$ is contained in the set $A$, then $B$ without $A$ is nonempty.
+
+Solution: 
+
+P: The set $B$ is contained in set $A$.
+
+Q: $B$ without $A$ is nonempty. 
+
+$P \implies Q$ statement. Therefore, the negation of this would be 
+
+\[
+    \neg(P \implies Q) = P \wedge \neg Q
+\]
+
+In a sentence, this negation reads as: The set $B$ is contained in set $A$ and $B$ without $A$ is empty.
+
+The converse of this sentence is if set $B$ without $A$ is nonempty, then the set $B$ is contained in the set $A$.
+
+\item For every prime number $p$, either $p$ is odd or $p$ is 2.
+
+Solution: Symbolically, the statement can be written as 
+
+\[ 
+    \text{for all primes } p, \ (p \ \text{odd}) \vee ( p = 2)
+\]
+
+The statement is of the form $\forall x, P \vee Q $ so the general negation is $ \exists x, \neg P \wedge \neg Q$. So, the negation of this statement is 
+
+\[
+    \text{There exists some prime } p, \ \neg (p \ \text{odd}) \wedge \neg (p = 2)
+\]
+    
+\[
+    \text{There exists some prime } p, \text{ such that }, \  (p \ \text{even}) \wedge (p \neq 2)
+\]
+
+In sentence form, there exists a prime $p$ such that $p$ is even and $p$ is not equal to $2$.
+
+
+\end{enumerate}
+
+\vspace{.2in}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item (30 points) Write each of the following as English sentences. Say whether they are true or false. Prove your claim (this may need examples and/or counterexamples)
+\begin{enumerate}[(i)]
+\item $(\forall x\in\mathbb{N})(x \ge 1).$
+
+Solution: For all natural numbers $x$, such that $x$ is greater than or equal to $1$
+
+We know this to be true as natural numbers are defined as $\N = \lbrace 1,2,3,\dots \rbrace$. Therefore if we were to take the number $2$ as an example, we get $2 \ge 1$. Which we know satisfies our condition. The lowest number we could use would be $1$ and if we plug that in we get $1 \ge 1$. By this we know that all natural numbers will satisfy our condition. 
+
+\item $(\exists! x\in\mathbb{R})(x\ge0\wedge x\leq0).$
+
+Solution: There is exactly one number such that x is greater than or equal to $0$ and also less than or equal to $0$. This is a true statement for only the number $0$. 
+
+\begin{proof}
+
+We will prove this by taking 3 cases, for $x > 0$, $x = 0$, and $x < 0$.
+
+
+Case 1: Taking $x > 0$, let $x = 5$. $5 \geq 0$, which is true, but $5 \leq 0$ is false. Therefore, the logical statement $P \wedge Q$ is false.
+
+Case 2: Let $x = 0 $. $0 \geq 0$ is true and $0 \leq 0$ is also true. So, logically, $T \wedge T = T$. This is a true statement.
+
+Case 3: Taking $x < 0$, let $x = -2$. $ -2 \geq 0$ is false, whereas $-2 \leq 0$ is true. $F \wedge T = F$, therefore this case is false.
+
+Therefore, the only case that satisfies this claim is when $x = 0$. 
+\end{proof}
+
+
+
+\item $\forall x\in\mathbb{R},\,\exists y\in\mathbb{R},\,x+y=0$.
+
+Solution:For all real numbers $x$, there is some number $y$ such that their sum is zero. This is a true statement. For every value x, we have the equation $x = -y$. So no matter what value of $x$ we have, there will exist a $y$ value that is the additive inverse of $x$.
+
+
+\item $\exists x\in\mathbb{R},\,\forall y\in\mathbb{R},\,x+y=0$.
+
+Solution: For exists some real number x such that for all real numbers y, their sum is zero. This statement is false, because you can not have a value for $x$ that is the additive inverse for all numbers $y$. 
+
+
+\item $\exists x\in\mathbb{R},\,\forall y\in\mathbb{R},\,x\geq y$.
+
+Solution: There is a real number $x$ that is bigger than all real numbers $y$. This is a true statement, which has to do with the infinities of the real numbers. I can always find some number bigger than the previous ones suggested. Whenever you can guess a number $x$, I can always guess $10^x$. This argument can continue building until we exhaust all numbers, but will come up with new real numbers in the process.
+
+
+\end{enumerate}
+
+
+\vspace{.2in}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item (20 points) Translate each of the following sentences into symbolic logic. 
+\begin{enumerate}[(i)]
+\item Even numbers are divisible by 2.
+
+Solution: Symbolically, this can be rewritten into a $ P \implies Q $ conditional with:
+
+P: $n$ is an even number.
+
+Q: $n$ is divisible by 2.
+
+Therefore, we have $ P \implies Q $ rewriting the statement as "if $n$ is an even number then it is divisible by 2".
+
+
+\item If $f$ is a polynomial, $f'$ is constant whenever the degree of $f$ is less than 2.
+
+Solution: Let $p(x)$ represent all polynomial functions and deg(f) represent the degree of some function f. Then $$(\forall f \in p(x)), \ (\text{deg}(f) < 2) \implies (f' = \text{constant})$$
+
+
+\item If $x$ is prime, then $\sqrt{x}$ is not a rational number.
+
+Solution: $x \in \lbrace \text{primes} \rbrace \implies \sqrt{x} \notin \Q$
+
+
+\item Every set is contained in itself.
+
+Solution: P: A is a set.
+
+Q: A is a subset of itself.
+
+$P \implies Q$ says that if A is a set then A is a subset of itself.
+
+
+\item There exist two integers whose product is negative, but whose sum is positive.
+
+Solution: 
+
+This is a $ P \wedge Q $ statement.
+
+$(\exists x \in \Z,  \exists y \in \Z)$, $(x*y < 0) \wedge (x + y > 0)$
+
+
+\end{enumerate}
+\end{enumerate}
+
+
+\underline{\hspace{6in}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{.5in}
+
+\noindent \textbf{Extra Credit:}  Write each of the following as English sentences. Say whether they are true or false. Prove your claim (this may need examples and/or counterexamples)
+\begin{enumerate}[(i)]
+\item $(\forall x\in\mathbb{N})(x \text{ is prime}\wedge x\ne 2\implies x \text{ is odd}).$
+\item $(\exists! x\in\mathbb{R})( \log_e{x} = 1).$ 
+\item $\forall x\in\mathbb{R},\,x+2>x$.
+\item $\exists x\in\mathbb{N},\, 2x+3\geq6x+7$.
+\end{enumerate}
+
+
+
+
+\end{document}
